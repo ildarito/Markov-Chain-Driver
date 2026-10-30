@@ -1,9 +1,14 @@
 {
   "schema": "vasiliy-observed-state-csr-v1",
-  "file": "model_compact.mat",
   "state_indexing": "one-based observed state IDs",
   "row_start_indexing": "one-based offsets; last offset is number of edges + 1",
   "speed_bins": "e corresponds to [e*speed_step_kmh,(e+1)*speed_step_kmh)",
   "fallback": "hold current driver state if its (speed_bin,state_id) row is absent",
-  "instructions": "Find row with matching row_speed_bin and row_current_state. Its edges are row_start_1based(r):row_start_1based(r+1)-1; sample target_state using probability. Decode state_values(target_state,:)."
+  "instructions": "Find row with matching row_speed_bin and row_current_state. Its edges are row_start_1based(r):row_start_1based(r+1)-1; sample target_state using probability. Decode state_values(target_state,:).",
+  "original_export_filename": "model_compact.mat",
+  "distributed_files": [
+    "models/01_pedals_parking_selector.mat",
+    "models/02_pedals_parking_selector_doors.mat",
+    "models/03_pedals_parking_selector_steering_doors.mat"
+  ]
 }
