@@ -1,0 +1,36 @@
+# Raw input and local experiment outputs
+data/
+results/runs/
+*.mat
+!models/*.mat
+*.sqlite
+*.sqlite-*
+*.db
+*.log
+split_manifest.csv
+run_settings.json
+local_settings.*
+.env
+.env.*
+!.env.example
+# Python and local tool installations
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+_deps/
+_tools/
+_matplotlib_cache/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+# Manuscript build intermediates
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls

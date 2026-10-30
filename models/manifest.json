@@ -1,0 +1,30 @@
+{
+  "source_run": "run_a4001f6f0e48",
+  "original_experimental_runner_sha256": "27f7ec93de825a01aded5a66d0179d8daa1c54e310f594150e692359813b2903",
+  "portable_runner_sha256": "535f77e7d58490821fa2b401640ca5e22b8b3364211eb8cb1ad4b8b5567494fc",
+  "distribution_changes": [
+    "Portable default data/output paths",
+    "Standard pip dependency discovery",
+    "Generic missing-input message; no scientific algorithm changes"
+  ],
+  "models": [
+    {
+      "scenario": "01_pedals_parking_selector",
+      "file": "models/01_pedals_parking_selector.mat",
+      "bytes": 2995808,
+      "sha256": "6bc6cdc43d5337bc08c29f5b6ee1f4d4715914537c305676a658b0e32ab98696"
+    },
+    {
+      "scenario": "02_pedals_parking_selector_doors",
+      "file": "models/02_pedals_parking_selector_doors.mat",
+      "bytes": 4292208,
+      "sha256": "08d1ad11b03fc863a0adf66f592d83de99b9df49e343365220dcb2de1ca56f6b"
+    },
+    {
+      "scenario": "03_pedals_parking_selector_steering_doors",
+      "file": "models/03_pedals_parking_selector_steering_doors.mat",
+      "bytes": 32386094,
+      "sha256": "3c359779d900add5ec7b7c61886da3b78a8139a350420a0f6fec36b50fcea91b"
+    }
+  ]
+}
