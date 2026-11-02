@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "run_id": "run_d81e43f1ced8",
+  "program_sha256": "a9f071e4f85909d4fe9b748b6d5e0c781836d684962c83beea17ba2736e0b3d5",
+  "model_sha256": "b3a7715f928ace2b449f188775a7c72e9c7ffedd236dc42018f11afab7baf81e",
+  "model_bytes": 48210967,
+  "state_count": 687888,
+  "retained_edges_checked": 5854920,
+  "max_row_sum_error": 4.440892098500626e-16,
+  "max_probability_count_error": 0.0,
+  "band_lower": 4487,
+  "band_upper": 4478,
+  "band_roundtrip": "PASS for all retained edges",
+  "manifest_identical_to_S1_S3": true,
+  "training_status": {
+    "error": 3491,
+    "ok": 1005,
+    "no_valid_transitions": 16
+  },
+  "test_status": {
+    "error": 923,
+    "ok": 211
+  },
+  "training_error_reasons": {
+    "Missing MATLAB signal: AccPedalPos": 598,
+    "Missing MATLAB signal: L_INV2TM_MotorSpeed": 10,
+    "Missing MATLAB signal: DNR_Dashboard": 593,
+    "Missing MATLAB signal: DoorsOpen_CD": 2,
+    "Missing MATLAB signal: DoorsOpen_CC": 41,
+    "Missing MATLAB signal: SteeringWheelAngle": 17,
+    "Missing MATLAB signal: BrakePedalPos": 4,
+    "network_win53": 2226
+  },
+  "test_error_reasons": {
+    "Missing MATLAB signal: AccPedalPos": 196,
+    "Missing MATLAB signal: DNR_Dashboard": 148,
+    "Missing MATLAB signal: L_INV2TM_MotorSpeed": 3,
+    "Missing MATLAB signal: SteeringWheelAngle": 4,
+    "Missing MATLAB signal: DoorsOpen_CC": 18,
+    "Missing MATLAB signal: BrakePedalPos": 1,
+    "network_win53": 553
+  },
+  "usable_test_logs": 201,
+  "s3_s4_common_train_logs": 1005,
+  "s3_s4_common_test_logs": 201,
+  "s4_only_train_logs": 0,
+  "s4_only_test_logs": 0,
+  "scientific_status": "Network-limited exploratory S4 fit; successful program completion is not complete-corpus processing",
+  "common_controls_accuracy": 0.9558508854496331,
+  "common_controls_persistence_accuracy": 0.955886396798537
+}

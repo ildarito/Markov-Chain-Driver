@@ -9,6 +9,7 @@
   "distributed_files": [
     "models/01_pedals_parking_selector.mat",
     "models/02_pedals_parking_selector_doors.mat",
-    "models/03_pedals_parking_selector_steering_doors.mat"
+    "models/03_pedals_parking_selector_steering_doors.mat",
+    "models/04_pedals_parking_selector_steering_doors_directions.mat"
   ]
 }

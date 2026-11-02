@@ -1,7 +1,7 @@
 # Markov-Chain-Driver
 
 Speed-conditioned, count-based Markov models of joint driver controls for urban electric transport.
-Companion implementation and three trained models for *Environment-Dependent Markov Models of Driver Actions for Urban Electric Transport*, by Akhmetshin Ildar Ahtamovich.
+Companion implementation and four trained models for *Environment-Dependent Markov Models of Driver Actions for Urban Electric Transport*, by Akhmetshin Ildar Ahtamovich.
 
 ## Quick start
 
@@ -28,9 +28,19 @@ Each MAT signal must be a numeric `[time_seconds, value]` array or a supported t
 
 The 80/20 split groups matching log basenames; it does not establish independence between drivers, routes or days. Results include six predictors, exact-state Brier score, strict and clipped NLL, accuracy, support/fallback rates, change detection, calibration, log bootstrap intervals, speed-conditioned scores, storage/band diagnostics and limited recorded-speed rollouts. NLL and exact-state accuracy across different state definitions or dt are not directly comparable.
 
+## Fourth scenario: backward direction signs
+
+```powershell
+python run_fourth_scenario.py --data "D:\my_logs"
+```
+
+This command runs only S4. It retains S3's five physical controls, dt=0.01 s, n=5, 0.5 percentage-point pedal bins, 0.5 km/h speed bins, 10-degree steering bins and ±1260-degree raw steering limit. It adds two ternary (-1, 0, +1) backward-change signs, calculated before quantization from previous-held raw signed pedal and steering measurements. Initial points without continuous history are excluded, and chunk overlap preserves history. Base steering retains S3's offline linear interpolation; only the added sign features are causal with respect to raw measurement availability. `--split-manifest FILE` reuses a supplied original split, with file-integrity checks. Restricted operational manifests are not distributed.
+
+**The released S4 checkpoint is network-limited.** Its original run encountered Windows error 53 on 2226 training and 553 test paths. It used 1005 training logs and 201 nonempty test logs, subsets of S3's accepted data. The same predefined file split does not make this a controlled feature ablation. See `results/s4_coverage_audit.json` and [S4 interpretation](docs/s4_results.md).
+
 ## Trained models and reported results
 
-`models/` contains the original compact MAT exports for S1, S2 and S3. `models/manifest.json` records SHA-256 checksums, run ID and the original experimental program checksum. The portable runner changes only default paths, dependency discovery and a missing-input message; changing the program hash produces a new run directory. Model parameters are not refitted. `models/format.json` and [the format guide](docs/model_format.md) describe one-based state IDs and compressed observed rows. MATLAB can load these files using `load`; they are not full Cartesian transition matrices.
+`models/` contains the original compact MAT exports for S1, S2, S3 and S4. `models/manifest.json` records SHA-256 checksums, run ID and the original experimental program checksum. The portable runner changes only default paths, dependency discovery and a missing-input message; changing the program hash produces a new run directory. Model parameters are not refitted. `models/format.json` and [the format guide](docs/model_format.md) describe one-based state IDs and compressed observed rows. MATLAB can load these files using `load`; they are not full Cartesian transition matrices.
 
 `results/scenario_table.csv` and `results/baseline_table.csv` contain the article's aggregate results. Probability payloads occupy approximately 6.58, 9.51 and 98.57 MiB before MAT compression. They are smaller than the corresponding exact bands. High one-step accuracy largely reflects persistence. Zero-probability test events make strict NLL infinite; clipped NLL uses epsilon=1e-12. Recorded-speed rollouts show substantial distributional mismatch. These models have not been validated as realistic closed-loop virtual drivers.
 
@@ -52,3 +62,5 @@ Contact: ildarakhmetshin2112@gmail.com.
 Repository: https://github.com/ildarito/Markov-Chain-Driver
 
 No open-source license has been selected for this release. Public visibility permits viewing; it does not itself grant a software or data license. No redistribution license for raw operational logs is provided.
+
+S4 extends the sparse probability payload to 150.37 MiB before MAT compression. Its joint Brier score is 0.370136, versus 0.614664 for persistence and 0.343870 for the unconditional chain. Decoded five-control accuracy is 95.5851%, versus 95.5886% for persistence. Larger augmented-state change F1 does not establish better physical-action prediction.

@@ -1,5 +1,4 @@
 {
-  "source_run": "run_a4001f6f0e48",
   "original_experimental_runner_sha256": "27f7ec93de825a01aded5a66d0179d8daa1c54e310f594150e692359813b2903",
   "portable_runner_sha256": "dc95351953c6f337178b5a0e3d72f958b2abbfc7674e61fa0b2b0f06dde03e99",
   "distribution_changes": [
@@ -12,19 +11,40 @@
       "scenario": "01_pedals_parking_selector",
       "file": "models/01_pedals_parking_selector.mat",
       "bytes": 2995808,
-      "sha256": "6bc6cdc43d5337bc08c29f5b6ee1f4d4715914537c305676a658b0e32ab98696"
+      "sha256": "6bc6cdc43d5337bc08c29f5b6ee1f4d4715914537c305676a658b0e32ab98696",
+      "source_run": "run_a4001f6f0e48"
     },
     {
       "scenario": "02_pedals_parking_selector_doors",
       "file": "models/02_pedals_parking_selector_doors.mat",
       "bytes": 4292208,
-      "sha256": "08d1ad11b03fc863a0adf66f592d83de99b9df49e343365220dcb2de1ca56f6b"
+      "sha256": "08d1ad11b03fc863a0adf66f592d83de99b9df49e343365220dcb2de1ca56f6b",
+      "source_run": "run_a4001f6f0e48"
     },
     {
       "scenario": "03_pedals_parking_selector_steering_doors",
       "file": "models/03_pedals_parking_selector_steering_doors.mat",
       "bytes": 32386094,
-      "sha256": "3c359779d900add5ec7b7c61886da3b78a8139a350420a0f6fec36b50fcea91b"
+      "sha256": "3c359779d900add5ec7b7c61886da3b78a8139a350420a0f6fec36b50fcea91b",
+      "source_run": "run_a4001f6f0e48"
+    },
+    {
+      "scenario": "04_pedals_parking_selector_steering_doors_directions",
+      "file": "models/04_pedals_parking_selector_steering_doors_directions.mat",
+      "bytes": 48210967,
+      "sha256": "b3a7715f928ace2b449f188775a7c72e9c7ffedd236dc42018f11afab7baf81e",
+      "source_run": "run_d81e43f1ced8",
+      "status": "network-limited exploratory checkpoint",
+      "accepted_training_logs": 1005,
+      "nonempty_test_logs": 201,
+      "failed_training_network_paths": 2226,
+      "failed_test_network_paths": 553
     }
-  ]
+  ],
+  "source_runs": [
+    "run_a4001f6f0e48",
+    "run_d81e43f1ced8"
+  ],
+  "original_s4_runner_sha256": "a9f071e4f85909d4fe9b748b6d5e0c781836d684962c83beea17ba2736e0b3d5",
+  "portable_s4_runner_sha256": "ab16717048dd0b8566342503cbb51698009c0c9c3bee243d8abf3d0584a1507f"
 }

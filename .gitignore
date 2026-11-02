@@ -1,6 +1,7 @@
 # Raw input and local experiment outputs
 data/
 results/runs/
+results/runs_s4/
 *.mat
 !models/*.mat
 *.sqlite
