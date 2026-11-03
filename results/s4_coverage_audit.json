@@ -2,50 +2,74 @@
   "status": "PASS",
   "run_id": "run_d81e43f1ced8",
   "program_sha256": "a9f071e4f85909d4fe9b748b6d5e0c781836d684962c83beea17ba2736e0b3d5",
-  "model_sha256": "b3a7715f928ace2b449f188775a7c72e9c7ffedd236dc42018f11afab7baf81e",
-  "model_bytes": 48210967,
-  "state_count": 687888,
-  "retained_edges_checked": 5854920,
-  "max_row_sum_error": 4.440892098500626e-16,
+  "model_sha256": "d8d951208fd6a2f427d9379708f40a5178fac10fdd7f163d808552343da16c15",
+  "model_bytes": 77380055,
+  "state_count": 851541,
+  "retained_edges_checked": 9390957,
+  "max_row_sum_error": 5.551115123125783e-16,
   "max_probability_count_error": 0.0,
-  "band_lower": 4487,
-  "band_upper": 4478,
+  "band_lower": 8527,
+  "band_upper": 8527,
   "band_roundtrip": "PASS for all retained edges",
   "manifest_identical_to_S1_S3": true,
   "training_status": {
-    "error": 3491,
-    "ok": 1005,
-    "no_valid_transitions": 16
+    "error": 2712,
+    "ok": 1770,
+    "no_valid_transitions": 30
   },
   "test_status": {
-    "error": 923,
-    "ok": 211
+    "error": 711,
+    "ok": 423
   },
   "training_error_reasons": {
-    "Missing MATLAB signal: AccPedalPos": 598,
-    "Missing MATLAB signal: L_INV2TM_MotorSpeed": 10,
-    "Missing MATLAB signal: DNR_Dashboard": 593,
-    "Missing MATLAB signal: DoorsOpen_CD": 2,
-    "Missing MATLAB signal: DoorsOpen_CC": 41,
-    "Missing MATLAB signal: SteeringWheelAngle": 17,
+    "Missing MATLAB signal: AccPedalPos": 922,
+    "Missing MATLAB signal: L_INV2TM_MotorSpeed": 16,
+    "Missing MATLAB signal: DNR_Dashboard": 1684,
+    "Missing MATLAB signal: DoorsOpen_CD": 3,
+    "Missing MATLAB signal: DoorsOpen_CC": 45,
+    "Missing MATLAB signal: SteeringWheelAngle": 36,
     "Missing MATLAB signal: BrakePedalPos": 4,
-    "network_win53": 2226
+    "Missing MATLAB signal: DoorsOpen_CE": 2
   },
   "test_error_reasons": {
-    "Missing MATLAB signal: AccPedalPos": 196,
-    "Missing MATLAB signal: DNR_Dashboard": 148,
-    "Missing MATLAB signal: L_INV2TM_MotorSpeed": 3,
-    "Missing MATLAB signal: SteeringWheelAngle": 4,
-    "Missing MATLAB signal: DoorsOpen_CC": 18,
-    "Missing MATLAB signal: BrakePedalPos": 1,
-    "network_win53": 553
+    "Missing MATLAB signal: AccPedalPos": 213,
+    "Missing MATLAB signal: DNR_Dashboard": 460,
+    "Missing MATLAB signal: L_INV2TM_MotorSpeed": 4,
+    "Missing MATLAB signal: SteeringWheelAngle": 9,
+    "Missing MATLAB signal: DoorsOpen_CC": 20,
+    "Missing MATLAB signal: BrakePedalPos": 3,
+    "Missing MATLAB signal: DoorsOpen_CD": 2
   },
-  "usable_test_logs": 201,
-  "s3_s4_common_train_logs": 1005,
-  "s3_s4_common_test_logs": 201,
+  "usable_test_logs": 408,
+  "s3_s4_common_train_logs": 1770,
+  "s3_s4_common_test_logs": 408,
   "s4_only_train_logs": 0,
   "s4_only_test_logs": 0,
-  "scientific_status": "Network-limited exploratory S4 fit; successful program completion is not complete-corpus processing",
-  "common_controls_accuracy": 0.9558508854496331,
-  "common_controls_persistence_accuracy": 0.955886396798537
+  "scientific_status": "Completed resumed S4 fit: accepted train/test log cohorts match S3; no network-path failures",
+  "common_controls_accuracy": 0.9547689476614162,
+  "common_controls_persistence_accuracy": 0.9547782857695261,
+  "checkpoint_completed_moscow": "2026-11-02T17:32:54.938560+03:00",
+  "previous_model_sha256": "b3a7715f928ace2b449f188775a7c72e9c7ffedd236dc42018f11afab7baf81e",
+  "previous_state_count": 687888,
+  "previous_train_logs": 1005,
+  "previous_test_logs": 201,
+  "network_failures_cleared_train": 2226,
+  "network_failures_cleared_test": 553,
+  "s3_s4_event_comparison": {
+    "train": {
+      "s3_events": 1420936125,
+      "s4_events": 1420933277,
+      "history_excluded_transitions": 2848,
+      "logs_with_event_count_change": 1770,
+      "max_events_excluded_per_log": 272
+    },
+    "test": {
+      "s3_events": 316767102,
+      "s4_events": 316766519,
+      "history_excluded_transitions": 583,
+      "logs_with_event_count_change": 408,
+      "max_events_excluded_per_log": 18
+    }
+  },
+  "checkpoint_note": "Same run ID and program/manifest; resumed counts and export replaced the former partial checkpoint. Identify by SHA-256 and completion time."
 }

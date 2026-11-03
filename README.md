@@ -36,7 +36,8 @@ python run_fourth_scenario.py --data "D:\my_logs"
 
 This command runs only S4. It retains S3's five physical controls, dt=0.01 s, n=5, 0.5 percentage-point pedal bins, 0.5 km/h speed bins, 10-degree steering bins and ±1260-degree raw steering limit. It adds two ternary (-1, 0, +1) backward-change signs, calculated before quantization from previous-held raw signed pedal and steering measurements. Initial points without continuous history are excluded, and chunk overlap preserves history. Base steering retains S3's offline linear interpolation; only the added sign features are causal with respect to raw measurement availability. `--split-manifest FILE` reuses a supplied original split, with file-integrity checks. Restricted operational manifests are not distributed.
 
-**The released S4 checkpoint is network-limited.** Its original run encountered Windows error 53 on 2226 training and 553 test paths. It used 1005 training logs and 201 nonempty test logs, subsets of S3's accepted data. The same predefined file split does not make this a controlled feature ablation. See `results/s4_coverage_audit.json` and [S4 interpretation](docs/s4_results.md).
+**S4 was rerun after network access was restored.** The current checkpoint uses all 1770 accepted training and 408 nonempty test logs, exactly the accepted file cohorts of S3. No network-path failures remain. The 2712 training and 711 test rejections are missing-channel records; 30 training and 15 loaded test logs have no valid transitions. S4 excludes 2848 training and 583 test transitions relative to S3 because of required history. See `results/s4_coverage_audit.json` and [S4 interpretation](docs/s4_results.md). The former partial checkpoint remains available in Git history, but is superseded by the current model checksum.
+
 
 ## Trained models and reported results
 
@@ -63,4 +64,4 @@ Repository: https://github.com/ildarito/Markov-Chain-Driver
 
 No open-source license has been selected for this release. Public visibility permits viewing; it does not itself grant a software or data license. No redistribution license for raw operational logs is provided.
 
-S4 extends the sparse probability payload to 150.37 MiB before MAT compression. Its joint Brier score is 0.370136, versus 0.614664 for persistence and 0.343870 for the unconditional chain. Decoded five-control accuracy is 95.5851%, versus 95.5886% for persistence. Larger augmented-state change F1 does not establish better physical-action prediction.
+S4 extends the sparse probability payload to 232.07 MiB before MAT compression. Its joint Brier score is 0.346851, versus 0.619023 for persistence and 0.330051 for the unconditional chain. Decoded five-control accuracy is 95.4769%, versus 95.4778% for persistence. Larger augmented-state change F1 does not establish better physical-action prediction.
