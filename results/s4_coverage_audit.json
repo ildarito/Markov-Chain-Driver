@@ -45,16 +45,10 @@
   "s3_s4_common_test_logs": 408,
   "s4_only_train_logs": 0,
   "s4_only_test_logs": 0,
-  "scientific_status": "Completed resumed S4 fit: accepted train/test log cohorts match S3; no network-path failures",
+  "scientific_status": "Completed S4 fit: accepted train/test log cohorts match S3",
   "common_controls_accuracy": 0.9547689476614162,
   "common_controls_persistence_accuracy": 0.9547782857695261,
   "checkpoint_completed_moscow": "2026-11-02T17:32:54.938560+03:00",
-  "previous_model_sha256": "b3a7715f928ace2b449f188775a7c72e9c7ffedd236dc42018f11afab7baf81e",
-  "previous_state_count": 687888,
-  "previous_train_logs": 1005,
-  "previous_test_logs": 201,
-  "network_failures_cleared_train": 2226,
-  "network_failures_cleared_test": 553,
   "s3_s4_event_comparison": {
     "train": {
       "s3_events": 1420936125,
@@ -71,5 +65,5 @@
       "max_events_excluded_per_log": 18
     }
   },
-  "checkpoint_note": "Same run ID and program/manifest; resumed counts and export replaced the former partial checkpoint. Identify by SHA-256 and completion time."
+  "checkpoint_note": "Identify the distributed model by SHA-256 and export completion time."
 }

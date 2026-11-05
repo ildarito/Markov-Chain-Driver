@@ -34,20 +34,11 @@
       "bytes": 77380055,
       "sha256": "d8d951208fd6a2f427d9379708f40a5178fac10fdd7f163d808552343da16c15",
       "source_run": "run_d81e43f1ced8",
-      "status": "completed resumed checkpoint; no network-path failures",
+      "status": "completed",
       "accepted_training_logs": 1770,
       "nonempty_test_logs": 408,
-      "failed_training_network_paths": 0,
-      "failed_test_network_paths": 0,
       "checkpoint_completed_moscow": "2026-11-02T17:32:54.938560+03:00",
-      "accepted_file_cohorts_match_s3": true,
-      "previous_checkpoint": {
-        "commit": "361404e64a2b9c0b994e6be97be8a56fc55678f2",
-        "sha256": "b3a7715f928ace2b449f188775a7c72e9c7ffedd236dc42018f11afab7baf81e",
-        "status": "network-limited exploratory checkpoint",
-        "accepted_training_logs": 1005,
-        "nonempty_test_logs": 201
-      }
+      "accepted_file_cohorts_match_s3": true
     }
   ],
   "source_runs": [
@@ -56,5 +47,5 @@
   ],
   "original_s4_runner_sha256": "a9f071e4f85909d4fe9b748b6d5e0c781836d684962c83beea17ba2736e0b3d5",
   "portable_s4_runner_sha256": "ab16717048dd0b8566342503cbb51698009c0c9c3bee243d8abf3d0584a1507f",
-  "checkpoint_identity_note": "The S4 rerun resumed the same program/manifest and run identifier. Model SHA-256 and checkpoint completion time identify the updated export."
+  "checkpoint_identity_note": "Model SHA-256 and export completion time identify the distributed S4 model."
 }
